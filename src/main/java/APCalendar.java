@@ -58,12 +58,11 @@ public class APCalendar
   {
     int startOfYear = firstDayOfYear(year);
     int theDay = dayOfYear(month, day, year);
-    for(int i = 0; i < theDay; i++){
-      startOfYear++;
-      if(startOfYear == 7){
-        startOfYear = 0;
-      }
+    int count = theDay % 6;
+    count = count + startOfYear; 
+    if(count > 6){
+      count = count - 6;
     }
-    return startOfYear;
+    return count;
   }
 }
