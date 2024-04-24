@@ -61,7 +61,7 @@ public class APCalendar
     for(int i = 0; i < theDay; i++){
       startOfYear++;
       if(startOfYear == 7){
-        startOfYear == 1;
+        startOfYear = 0;
       }
     }
     return startOfYear;
